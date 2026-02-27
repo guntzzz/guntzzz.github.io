@@ -17,7 +17,7 @@
 
     <div class="hdrmenu">
       <a href="#home">Home</a>
-      <a href="spc_news.html">News</a>
+      <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <input type="text" placeholder="Search...">
       <button type="submit">submit</button>
@@ -44,9 +44,15 @@
         <button type="submit" onclick="getInput()" id="ansButt">calculate</button>
       <p>According to my calculations, the optimal spit angle from an height of 1.6 meters (that's my estimate for the starting height of the spit) is about 0.67 radians or (I was not so sure about my math so i did a <a href="https://www.desmos.com/calculator/6fkutawn8z">graphic check</a>, feel free to correct me).
         Analyzing the frame where Alex's spit leaves his mouth, I came up with an angle of 0.65 radians (37&deg), that's impressive but I expect no less from a world champion. Anyway, I assume for the calculator that every launch is done at the Alex's angle and estimate height, this makes
-        the initial velocity the only factor that influences spit distance. Using the initial velocity we calculate the optimal angle for the gravity acceleration of all eight planets and use that to determine the distance you will obtain there.
-      <img src="spit_angle.png" id="angle">
-      <img src="spit_audio.png" id="audio"></p>
+        the initial velocity the only factor that influences spit distance.
+      <figure>
+        <img src="spit_angle.png" id="angle">
+        <figcaption>Fig.1 - Alex Pina spit angle.</figcaption>
+      </figure>
+      <figure>
+        <img src="spit_audio.png" id="audio">
+        <figcaption>Fig.2 - Alex Pina spit sound waveform.</figcaption>
+      </figure></p>
       <p>Luckily, the video has sound, so I was able to open the audio track with a software to visualize the waveform, while the starting sound is very evident, you can't tell the same for the sound of the collision between the saliva mass and the floor, but listening carefully
         with a pair of headphones did the trick and I was able to determine the time of 1.6 seconds between launch and arrival.
       <br>Using these two informations, the initial velocity can be estimated and is about 7.2 meters per second (~26 km/h), this is consistent with the <a href="https://pubmed.ncbi.nlm.nih.gov/28154922/">experimental results</a>
