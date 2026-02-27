@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- semplici calcolatori per la fisica ad esempio che peso avresti in diversi pianeti ecc. -->
+    <link rel="stylesheet" href="simple_physics_calculators.css"></link>
+  </head>
+  <body>
+
+      <span class="right">simone@spc.it</span>
+      <span class="left">Pirri</span>
+
+    <br>
+    <div class="header">                                                        <!--HEADER-->
+      <h1>Simple Physics Calculators</h1>
+      <p>For miscellaneous curiosities</p>
+    </div>
+
+    <div class="hdrmenu">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <input type="text" placeholder="Search...">
+      <button type="submit">submit</button>
+    </div>
+
+<div class="container">
+
+    <div class="sidebar">
+      <a href="#plan_spit">Spit Distance</a>
+      <a href="#calc_2">Calculator2</a>
+      <a href="#calc_3">Calculator3</a>
+    </div>
+
+    <main class="content">
+      <h2>How far can you spit on other worlds?</h2>
+      <br>
+      <p>Believe it or not, this is one of the biggest question in all classical physics. As a human being, it is of great importance to know if you can send your own saliva to escape the gravity well of any of the planets of the solar system.
+         This calculator is meant to help you in such a difficult and delicate task.<br>
+         According to the <a href="https://recordsetter.com/spitting-world-records">Spitting World Records</a> page, the farthest saliva spit, by the great Alex Pina, went for an astonishing 264 inches or, for the most civilized ones, about 6.7 meters, just wow!
+         I am confident that the average human can go for at least half of that distance, let's say 3.5 meters.</p>
+      <p id="ans">Starting spit velocity:<br>Mercury:<br>Venus:<br>Earth:<br>Mars:<br>Jupiter:<br>Saturn:<br>Uranus:<br>Neptune:</p>
+      <p id="outSp">Where will your spitship arrive?</p>
+      <p>Spit distance on Earth <input type="text" id="spitDis"> m</p>
+        <button type="submit" onclick="getInput()" id="ansButt">calculate</button>
+      <p>According to my calculations, the optimal spit angle from an height of 1.6 meters (that's my estimate for the starting height of the spit) is about 0.67 radians or (I was not so sure about my math so i did a <a href="https://www.desmos.com/calculator/6fkutawn8z">graphic check</a>, feel free to correct me).
+        Analyzing the frame where Alex's spit leaves his mouth, I came up with an angle of 0.65 radians (37&deg), that's impressive but I expect no less from a world champion. Anyway, I assume for the calculator that every launch is done at the Alex's angle and estimate height, this makes
+        the initial velocity the only factor that influences spit distance.
+      <img src="spit_angle.png" id="angle">
+      <img src="spit_audio.png" id="audio"></p>
+      <p>Luckily, the video has sound, so I was able to open the audio track with a software to visualize the waveform, while the starting sound is very evident, you can't tell the same for the sound of the collision between the saliva mass and the floor, but listening carefully
+        with a pair of headphones did the trick and I was able to determine the time of 1.6 seconds between launch and arrival.
+      <br>Using these two informations, the initial velocity can be estimated and is about 7.2 meters per second (~26 km/h), this is consistent with the <a href="https://pubmed.ncbi.nlm.nih.gov/28154922/">experimental results</a>
+      <p> Unfortunately, even if spitting on Mars and Mercury can double your spitting distance, that's not remotely enough to send your saliva in outer space, also, as some illuminated minds were discussing
+        <a href="https://www.reddit.com/r/theydidthemath/comments/jrjy7i/request_how_hard_do_you_have_to_spit_straight_up/">here</a>, applying that much force to your spit will literally destroy your face, but we can surely search for a dwarf planet or an asteroid where this is feasible.
+      <p>Let's do that, we take the magnitude of Alex's spit initial velocity and confront that to the escape velocity of the smallest dwarf planet candidate in the solar system, <a href="https://en.wikipedia.org/wiki/120347_Salacia">Salacia.</a> This is a very simple calculation,
+        but even in this small object the escape velocity is about 394 meters per second, we are not there yet, let's search for a smaller object.
+        <br><a href="https://en.wikipedia.org/wiki/38628_Huya">Huya</a>, escape velocity: 162 meters per second;
+        <br><a href="https://en.wikipedia.org/wiki/7_Iris">Iris</a>, escape velocity: 134 meters per second;
+        <br><a href="https://en.wikipedia.org/wiki/97_Klotho">Klotho</a>, escape velocity: 59 meters per second, we're getting there;
+        <br><a href="https://en.wikipedia.org/wiki/Metis_(moon)">Metis</a>, escape velocity: 27 meters per second;
+        <br><a href="https://en.wikipedia.org/wiki/4179_Toutatis">Toutatis</a>, escape velocity: 2.1 meters per second, totally escaped this bad boy!
+    </main>
+
+</div>
+
+    <script src="simple_physics_calculators.js"></script>
+  </body>
+</html>
