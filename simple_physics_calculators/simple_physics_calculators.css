@@ -37,7 +37,7 @@ div {
 }
 
 img {
-  margin:50px 25px 50px 50px;
+  margin:50px 25px 10px 50px;
 }
 
 #angle {
@@ -52,4 +52,12 @@ img {
 
 p {
   margin-right:25px
+}
+
+figure {
+  float:right
+}
+
+figcaption {
+  text-align:center;
 }
