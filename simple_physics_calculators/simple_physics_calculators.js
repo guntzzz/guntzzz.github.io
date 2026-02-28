@@ -27,6 +27,10 @@ function getInput() {
                                           <br>Neptune: ${Math.round(distance[7]*100)/100} m`;
 }
 
+function search() {
+	let srcStr = document.getElementById("srcStr").value;
+	console.log(srcStr);
+
 function outerPlan(v_0,h_0) {
   let mercuryMR = [0.055,0.38];
   let venusMR = [0.81,0.95];
