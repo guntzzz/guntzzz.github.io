@@ -30,6 +30,7 @@ function getInput() {
 function search() {
 	let srcStr = document.getElementById("srcStr").value;
 	console.log(srcStr);
+}	
 
 function outerPlan(v_0,h_0) {
   let mercuryMR = [0.055,0.38];
