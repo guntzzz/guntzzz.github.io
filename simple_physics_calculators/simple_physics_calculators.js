@@ -9,11 +9,11 @@ function getInput() {
   let escVels = escVel();
   for (let i = 0; i < escVels.length; i++) {
     if (v_0 > escVels[i][1]) {
-      document.getElementById("outSp").innerHTML = `Your spit successfully escaped ${escVels[i][0]}\'s gravity well and ventured into outer space!`
-      console.log(v_0,escVels[i][1])
+      document.getElementById("outSp").innerHTML = `Your spit successfully escaped ${escVels[i][0]}\'s gravity well and ventured into outer space!`;
+      console.log(v_0,escVels[i][1]);
       break;
     } else {
-      document.getElementById("outSp").innerHTML = "Your spit can't even escape the gravity well of a small comet"
+      document.getElementById("outSp").innerHTML = "Your spit can't even escape the gravity well of a small comet";
     }
   }
   document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.round(v_0*100)/100} m/s
@@ -29,8 +29,103 @@ function getInput() {
 
 function search() {
 	let srcStr = document.getElementById("srcStr").value;
-	console.log(srcStr);
-}	
+  const dlt = document.getElementsByClassName("temp");
+  console.log(dlt.length)
+
+  while(dlt.length) {                                                           //studiare questa parte di codice
+    var parent = dlt[0].parentNode;
+    while( dlt[0].firstChild ) {
+      parent.insertBefore( dlt[0].firstChild, dlt[0]);
+    }
+    parent.removeChild( dlt [0]);
+  }
+
+  srcStr = srcStr.toLowerCase();
+  let pCont = document.getElementById("main_cont");
+  pCont = pCont.innerHTML;
+  let rCont = pCont.toLowerCase();
+  let indices = [];
+  let flag = 0;
+  while(true) {
+    if (flag == 0) {
+      var index = rCont.indexOf(srcStr);
+      if (index == -1) {
+        break;
+      } else {
+        indices.push(index);
+        flag = 1;
+      }
+    } else {
+      var index = rCont.indexOf(srcStr,index + srcStr.length);
+      if (index == -1) {
+        break;
+      } else {
+        indices.push(index);
+      }
+    }
+  }
+
+  let indicesLeft = [];
+  let indicesRight = [];
+  while(true) {
+    if (flag == 0) {
+      var index = rCont.indexOf("<");
+      if (index == -1) {
+        break;
+      } else {
+        indicesLeft.push(index);
+        flag = 1;
+      }
+    } else {
+      var index = rCont.indexOf("<",index + 1);
+      if (index == -1) {
+        break;
+      } else {
+        indicesLeft.push(index);
+      }
+    }
+  }
+  while(true) {
+    if (flag == 0) {
+      var index = rCont.indexOf(">");
+      if (index == -1) {
+        break;
+      } else {
+        indicesRight.push(index);
+        flag = 1;
+      }
+    } else {
+      var index = rCont.indexOf(">",index + 1);
+      if (index == -1) {
+        break;
+      } else {
+        indicesRight.push(index);
+      }
+    }
+  }
+  let indicesClean = [];
+  for (j = 0; j < indices.length; j++) {
+    flag = 0;
+    for (i = 0; i < indicesLeft.length; i++) {
+      if (indices[j] > indicesLeft[i] && indices[j] < indicesRight[i]) {
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      indicesClean.push(indices[j]);
+    }
+  }
+  indices = indicesClean;
+  const leftTag = "<span style=\"background-color:yellow\" class=\"temp\">";
+  const rightTag = "</span>";
+  for (i = 0; i < indices.length; i++) {
+    var highl = pCont.slice(0,indices[i]+i*(leftTag.length+rightTag.length)) + leftTag + pCont.slice(indices[i]+i*(leftTag.length+rightTag.length),indices[i]+i*(leftTag.length+rightTag.length) + srcStr.length) + rightTag + pCont.slice(indices[i]+i*(leftTag.length+rightTag.length) + srcStr.length);
+    pCont = highl;
+    document.getElementById("main_cont").innerHTML = highl;
+    }
+  console.log(indices.length);
+}
+
 
 function outerPlan(v_0,h_0) {
   let mercuryMR = [0.055,0.38];
