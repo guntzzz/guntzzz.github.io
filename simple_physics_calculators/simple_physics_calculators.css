@@ -61,3 +61,7 @@ figure {
 figcaption {
   text-align:center;
 }
+
+a:hover {
+	color:orange;
+}
