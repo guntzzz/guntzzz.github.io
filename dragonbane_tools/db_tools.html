@@ -9,11 +9,15 @@
 		<br>
 		<p>Insert combat partecipants each in a different row
 		<br>
-		<span style="font-size:12px">5/3/2026 - you can now keep an initiative turn if you specify the card number after the combatant name, separated by a comma ","</span>
+		<span style="font-size:12px">5/3/2026
+				<br>you can now keep an initiative turn if you specify the card number after the combatant name, separated by a comma ","
+				<br>you can now once per turn swap initiative with another combatant, check the corrispondent box and click "Swap". A partecipant who has already swapped turns is marked with an asterisk "*"
+		</span>
 		</p>
 		<textarea id="combPart" name="dBTools" rows="10" cols="50"></textarea>
 		<button type="submit" onclick="dbInitiative()" id="initData">Submit</button>
 		<p id="results"></p>
+		<span id="swapB"></span>
 		<script src="db_tools.js"></script>
 	</body>
 </html>
