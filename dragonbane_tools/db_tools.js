@@ -8,20 +8,15 @@ function dbInitiative() {
 	for (i = 0; i < data.length; i++) {
 		let kpTurn = [];
 		kpTurn = data[i].split(",");
-		console.log(kpTurn.length);
-		if (kpTurn.length == 2) {
+		if (kpTurn.length == 2 && kpTurn[1] <= 10 && kpTurn[1] > 0) {
 			res.push([parseInt(kpTurn[1]),kpTurn[0]]);
 			rem.push(data[i]);
 		}
 	}
-	console.log(rem);
 	for (i = 0; i < rem.length; i++) {
 		cards.splice(cards.indexOf(parseInt(rem[i].split(",")[1])),1);
-		console.log(rem[i].split(",")[1]);
 		data.splice(data.indexOf(rem[i]),1);
 	}
-	console.log(cards);
-	console.log(data);
 	shuffleArray(cards);
 	for (let i = 0; i < data.length; i++) {
 		res.push([cards[i],data[i]]);
@@ -58,13 +53,22 @@ function swapTurns() {
 	var swap = [];
 	for (let i = 0; i < data.length-1; i++) {
 		data[i] = data[i].split(" ");
+		if (data[i][data[i].length-1] != "*") {
+			for (let j = 3; j < data[i].length; j++) {
+				data[i][2] = `${data[i][2]}` + ` ${data[i][j]}`;
+			}
+			data[i].splice(3,data[i].length-3);
+		}else if (data[i][data[i].length-1] == "*") { 
+			for (let j = 3; j < data[i].length-1; j++) {
+				data[i][2] = `${data[i][2]}` + ` ${data[i][j]}`;
+			}
+			data[i].splice(3,data[i].length-4);
+		} 
 		if (document.getElementById(`${i}`).checked == true) {
-			data[i].push(i)
+			data[i].push(i);
 			swap.push(data[i]);
 		}
-	console.log(swap);
 	}
-	console.log(data);
 	if (swap.length != 2) {
 		error();
 	} else {
@@ -76,15 +80,12 @@ function swapTurns() {
 				[data[swap[0][3]][2],data[swap[1][3]][2]] = [data[swap[1][3]][2],data[swap[0][3]][2]];
 				data[swap[0][3]].splice(3,1,"*");
 				data[swap[1][3]].splice(3,1,"*");
-				console.log(swap[0][4]);
-				console.log(swap[1][4]);
 				break;
 			}
 		}
 	}
 	document.getElementById("results").innerHTML = ""; 
 	for (let i = 0; i < data.length - 1; i++) {
-		console.log(data[i]);
 		if (data[i].length == 3 || data[i][3] != "*") {
 			document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + `<input type="checkbox" id="${i}"> ${data[i][1]} ${data[i][2]}<br>`;
 		} else {
