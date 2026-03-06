@@ -8,6 +8,12 @@ function dbInitiative() {
 	for (i = 0; i < data.length; i++) {
 		let kpTurn = [];
 		kpTurn = data[i].split(",");
+		if (kpTurn.length > 2) {
+			for (let j = 1; j < kpTurn.length-1; j++) {
+				kpTurn[0] = `${kpTurn[0]}` + `, ${kpTurn[j]}`;
+			}
+			kpTurn.splice(1,kpTurn.length-2);
+		}
 		if (kpTurn.length == 2 && kpTurn[1] <= 10 && kpTurn[1] > 0) {
 			res.push([parseInt(kpTurn[1]),kpTurn[0]]);
 			rem.push(data[i]);
