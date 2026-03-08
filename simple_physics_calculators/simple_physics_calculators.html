@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Simple Physics Calculators</title>
   <!-- semplici calcolatori per la fisica ad esempio che peso avresti in diversi pianeti ecc. -->
-    <link rel="stylesheet" href="simple_physics_calculators.css"></link>
+    <link rel="stylesheet" href="simple_physics_calculators.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
   <body>
-        <div class="header">                                                        <!--HEADER-->
-	<img src="spclogo_cel.svg" id="logo">
-	<h1>Simple Physics Calculators
+        <div class="header">
+          <a href="simple_physics_calculators.html" class="logo">                                                      <!--HEADER-->
+	<img src="spclogo_cel.svg" class="logo"></a>
+	<a href="simple_physics_calculators.html"><h1>Simple Physics Calculators
       	<p id="subt">For miscellaneous curiosities</p>
-	</h1>
-    </div>
+	</h1></a>
+</div></a>
 
     <div class="hdrmenu">
       <a href="index.html" id="mnitems">Home</a>
@@ -43,7 +46,7 @@
       <p id="outSp">Where will your spitship arrive?</p>
       <p>Spit distance on Earth <input type="text" id="spitDis" onfocus="this.value=''"> m</p>
 	<button type="submit" onclick="getInput()" id="ansButt">calculate</button>
- 			      <p>According to my calculations, the optimal spit angle from an height of 1.6 meters (that's my estimate for the starting height of the spit) is about 0.67 radians or (I was not so sure about my math so i did a <a href="https://www.desmos.com/calculator/6fkutawn8z">graphic check</a>, feel free to correct me).
+ 			      <p>According to my calculations, the optimal spit angle from an height of 1.6 meters (that's my estimate for the starting height of the spit) is about 0.67 radians (I was not so sure about my math so i did a <a href="https://www.desmos.com/calculator/6fkutawn8z">graphic check</a>, feel free to correct me).
         Analyzing the frame where Alex's spit leaves his mouth, I came up with an angle of 0.65 radians (37&deg), that's impressive but I expect no less from a world champion. Anyway, I assume for the calculator that every launch is done at the Alex's angle and estimate height, this makes
         the initial velocity the only factor that influences spit distance. We use that initial velocity to determine the optimal angle for the gravity acceleration of all eight planets.
       <figure>
