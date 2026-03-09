@@ -179,26 +179,26 @@ function numbAnime(x,l) {
   id = setInterval(frame,5);
   function frame() {
     if (i == 111) {
-      document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.round(x[8]*100)/100} m/s
-                                              <br>Mercury: ${Math.round(x[0]*100)/100} m
-                                              <br>Venus: ${Math.round(x[1]*100)/100} m
-                                              <br>Earth: ${l} m
-                                              <br>Mars: ${Math.round(x[3]*100)/100} m
-                                              <br>Jupiter: ${Math.round(x[4]*100)/100} m
-                                              <br>Saturn: ${Math.round(x[5]*100)/100} m
-                                              <br>Uranus: ${Math.round(x[6]*100)/100} m
-                                              <br>Neptune: ${Math.round(x[7]*100)/100} m`;
+      document.getElementById("ans").innerHTML = `Starting spit velocity: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[8]*100)/100} m/s</span>
+                                              <br>Mercury: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[0]*100)/100} m</span>
+                                              <br>Venus: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[1]*100)/100} m</span>
+                                              <br>Earth: <span style="font-weight:normal;color:rgb(0,255,255)">${l} m</span>
+                                              <br>Mars: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[3]*100)/100} m</span>
+                                              <br>Jupiter: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[4]*100)/100} m</span>
+                                              <br>Saturn: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[5]*100)/100} m</span>
+                                              <br>Uranus: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[6]*100)/100} m</span>
+                                              <br>Neptune: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.round(x[7]*100)/100} m</span>`;
       clearInterval(id);
     } else {
-        document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m/s
-                                                <br>Mercury: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Venus: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Earth: ${l} m
-                                                <br>Mars: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Jupiter: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Saturn: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Uranus: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
-                                                <br>Neptune: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m`;
+        document.getElementById("ans").innerHTML = `Starting spit velocity: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m/s</span>
+                                                <br>Mercury: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Venus: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Earth: <span style="font-weight:normal;color:rgb(0,255,255)">${l} m</span>
+                                                <br>Mars: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Jupiter: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Saturn: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Uranus: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>
+                                                <br>Neptune: <span style="font-weight:normal;color:rgb(0,255,255)">${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m</span>`;
         i++;
     }
   }
