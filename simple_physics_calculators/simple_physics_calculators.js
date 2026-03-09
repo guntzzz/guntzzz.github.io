@@ -16,15 +16,8 @@ function getInput() {
       document.getElementById("outSp").innerHTML = "Your spit can't even escape the gravity well of a small comet";
     }
   }
-  document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.round(v_0*100)/100} m/s
-                                          <br>Mercury: ${Math.round(distance[0]*100)/100} m
-                                          <br>Venus: ${Math.round(distance[1]*100)/100} m
-                                          <br>Earth: ${l} m
-                                          <br>Mars: ${Math.round(distance[3]*100)/100} m
-                                          <br>Jupiter: ${Math.round(distance[4]*100)/100} m
-                                          <br>Saturn: ${Math.round(distance[5]*100)/100} m
-                                          <br>Uranus: ${Math.round(distance[6]*100)/100} m
-                                          <br>Neptune: ${Math.round(distance[7]*100)/100} m`;
+  distance.push(v_0);
+  numbAnime(distance,l);
 }
 
 function search() {
@@ -177,4 +170,36 @@ function escVel() {
     console.log(escVelocities[i]);
   }
   return escVelocities;
+}
+
+function numbAnime(x,l) {
+  let id = null;
+  let i = 0;
+  clearInterval(id);
+  id = setInterval(frame,5);
+  function frame() {
+    if (i == 111) {
+      document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.round(x[8]*100)/100} m/s
+                                              <br>Mercury: ${Math.round(x[0]*100)/100} m
+                                              <br>Venus: ${Math.round(x[1]*100)/100} m
+                                              <br>Earth: ${l} m
+                                              <br>Mars: ${Math.round(x[3]*100)/100} m
+                                              <br>Jupiter: ${Math.round(x[4]*100)/100} m
+                                              <br>Saturn: ${Math.round(x[5]*100)/100} m
+                                              <br>Uranus: ${Math.round(x[6]*100)/100} m
+                                              <br>Neptune: ${Math.round(x[7]*100)/100} m`;
+      clearInterval(id);
+    } else {
+        document.getElementById("ans").innerHTML = `Starting spit velocity: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m/s
+                                                <br>Mercury: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Venus: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Earth: ${l} m
+                                                <br>Mars: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Jupiter: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Saturn: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Uranus: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m
+                                                <br>Neptune: ${Math.floor(Math.random()*10)}.${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)} m`;
+        i++;
+    }
+  }
 }
