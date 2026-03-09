@@ -86,22 +86,19 @@ img {
 }
 
 #angle {
-  height:500px;
-  float:right;
+  height:800px;
+  display:block;
+	margin:auto;
 }
 
 #audio {
-  height:400px;
-  margin:auto;
-	display:block;
+  height:200px;
+  float:right;
+	margin-top:0px;
 }
 
 p {
   margin-right:25px
-}
-
-#sAngle {
-  float:right;
 }
 
 figcaption {
