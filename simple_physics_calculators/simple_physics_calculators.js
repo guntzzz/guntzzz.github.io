@@ -1,6 +1,9 @@
 function getInput() {
   let x = document.getElementById("spitDis").value;
-  let l = x;
+  let l = 0;
+  if (x != ""){
+    l = x;
+  }
   let g = 9.8;
   let h_0 = 1.6;
   let th = 0.67;
