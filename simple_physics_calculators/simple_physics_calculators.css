@@ -23,7 +23,7 @@ body {
 
 .hdrmenu {
 	display:grid;
-	grid-template-columns: 6fr 2fr 2fr 2fr 2fr 1fr 1fr 6fr;
+	grid-template-columns: 6fr 1fr 1fr 1fr 5fr 1fr 1fr 6fr;
 	background-color:black;
 	position:sticky;
 	top:64px;
@@ -196,10 +196,14 @@ a {
 	background-size:cover;
 }
 
-#outSp a:link {
+#calculator a:link {
 	color:rgb(0,255,255);
 }
 
-#outSp a:hover {
+#calculator a:visited {
+	color:rgb(0,255,255);
+}
+
+#calculator a:hover {
 	color:orange;
 }
