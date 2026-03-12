@@ -53,7 +53,7 @@ function shuffleArray(array) {
 }
 
 function swapTurns() {
-	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>"; 
+	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>";
 	let data = document.getElementById("results").innerText;
 	data = data.split("\n");
 	var swap = [];
@@ -64,12 +64,12 @@ function swapTurns() {
 				data[i][2] = `${data[i][2]}` + ` ${data[i][j]}`;
 			}
 			data[i].splice(3,data[i].length-3);
-		}else if (data[i][data[i].length-1] == "*") { 
+		}else if (data[i][data[i].length-1] == "*") {
 			for (let j = 3; j < data[i].length-1; j++) {
 				data[i][2] = `${data[i][2]}` + ` ${data[i][j]}`;
 			}
 			data[i].splice(3,data[i].length-4);
-		} 
+		}
 		if (document.getElementById(`${i}`).checked == true) {
 			data[i].push(i);
 			swap.push(data[i]);
@@ -82,15 +82,15 @@ function swapTurns() {
 			if (swap[i].length > 4) {
 				error();
 				break;
-			} else if (i == swap.length - 1) { 
+			} else if (i == swap.length - 1) {
 				[data[swap[0][3]][2],data[swap[1][3]][2]] = [data[swap[1][3]][2],data[swap[0][3]][2]];
-				data[swap[0][3]].splice(3,1,"*");
+				// data[swap[0][3]].splice(3,1,"*");
 				data[swap[1][3]].splice(3,1,"*");
 				break;
 			}
 		}
 	}
-	document.getElementById("results").innerHTML = ""; 
+	document.getElementById("results").innerHTML = "";
 	for (let i = 0; i < data.length - 1; i++) {
 		if (data[i].length == 3 || data[i][3] != "*") {
 			document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + `<input type="checkbox" id="${i}"> ${data[i][1]} ${data[i][2]}<br>`;

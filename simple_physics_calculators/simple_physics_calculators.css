@@ -21,10 +21,6 @@ body {
   top:0;
 }
 
-@media (max-width: 600px) {
-		display:flex;
-}
-
 .hdrmenu {
 	display:grid;
 	grid-template-columns: 6fr 1fr 1fr 1fr 5fr 1fr 1fr 6fr;
