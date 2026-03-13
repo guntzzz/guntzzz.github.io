@@ -225,9 +225,9 @@ a {
 	#sidebar a {display:block;}
 	.container {grid-template-columns:1fr;margin:20px;position:relative;top:230px}
 	#calculator {width:80vw;}
-	#sBarButt {display:grid; height:100px;width:100px; border-radius:60px; background-color:orange;margin:0px 0px 5px 20px;}
+	#sBarButt {display:grid; height:80px;width:80px; border-radius:60px; background-color:orange;margin:0px 0px 5px 20px;}
 	#sBarButt:hover {border-color:orange;}
 	* {font-size:30px;}
 	#srcButt {width:160px;}
-	#ham {font-size:60px;}
+	#ham {font-size:50px;}
 }
