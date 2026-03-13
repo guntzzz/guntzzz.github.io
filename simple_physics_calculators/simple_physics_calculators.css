@@ -218,15 +218,16 @@ a {
 	.name {display:none;}
 	#subt {display:none;}
 	.logo {justify-self:start;height:100px;width:100px;}
-	.hdrmenu{grid-template-columns:1fr 1fr 1fr 2fr 1fr;width:100%;position:fixed;top:100px;z-index:100}
+	.hdrmenu{grid-template-columns:1fr 1fr 1fr 2fr 1fr;width:100%;position:fixed;top:90px;z-index:100}
 	#mnitems {grid-column-start:1;}
 	#srcStr {grid-column-start:4;}
 	#sidebar {display:none;width:30vw;}
 	#sidebar a {display:block;}
-	.container {grid-template-columns:1fr;margin:20px;position:relative;top:200px}
+	.container {grid-template-columns:1fr;margin:20px;position:relative;top:230px}
 	#calculator {width:80vw;}
-	#sBarButt {display:grid; height:100px;width:100px; border-radius:60px; background-color:orange;margin:0px 0px 5px 20px;font-size:80px;text-align:center;display:table;vertical-align:middle;}
+	#sBarButt {display:grid; height:100px;width:100px; border-radius:60px; background-color:orange;margin:0px 0px 5px 20px;}
 	#sBarButt:hover {border-color:orange;}
 	* {font-size:30px;}
 	#srcButt {width:160px;}
+	#ham {font-size:80px;}
 }
