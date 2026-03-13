@@ -55,7 +55,7 @@ body {
   grid-template-columns: 5fr 2fr 8fr 5fr;
 }
 
-.sidebar {
+#sidebar {
   display:grid;
   grid-template-rows:30px 30px 30px 30px;
   position:sticky;
@@ -67,14 +67,14 @@ body {
   grid-column-end:span 1;
 }
 
-.sidebar a {
+#sidebar a {
   margin-right:0px;
   padding:0px 10px 0px 10px;
   color:black;
   font-weight:bold;
 }
 
-.sidebar a:hover {
+#sidebar a:hover {
 	border-style:solid;
 	border-color:orange;
 	border-radius:40px;
@@ -206,4 +206,24 @@ a {
 
 #calculator a:hover {
 	color:orange;
+}
+
+#sBarButt {
+	display:none;
+}
+
+@media (max-width: 600px) {
+	.header {grid-template-columns:1fr;padding-bottom:20px;}
+	.name {display:none;}
+	#subt {display:none;}
+	.logo {justify-self:start;}
+	.hdrmenu{grid-template-columns:1fr 1fr 1fr 2fr 1fr;}
+	#mnitems {grid-column-start:1;}
+	#srcStr {grid-column-start:4;}
+	#sidebar {display:none;width:30vw;}
+	#sidebar a {display:block;}
+	.container {grid-template-columns:1fr;margin:20px;}
+	#calculator {width:80vw;}
+	#sBarButt {display:grid; width:30px; border-radius:40px; background-color:orange;margin:0px 0px 5px 20px;}
+	#sBarButt:hover {border-color:orange;}
 }

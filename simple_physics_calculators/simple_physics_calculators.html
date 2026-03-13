@@ -14,7 +14,7 @@
         <div class="header">
           <a href="simple_physics_calculators.html" class="logo">                                                      <!--HEADER-->
 	<img src="spclogo_cel.svg" class="logo"></a>
-	<a href="simple_physics_calculators.html"><h1>Simple Physics Calculators
+	<a href="simple_physics_calculators.html" class="name"><h1 class="name">Simple Physics Calculators
       	<p id="subt">For miscellaneous curiosities</p>
 	</h1></a>
 </div></a>
@@ -25,11 +25,12 @@
       <a href="spc_contact.html">Contact</a>
       <input type="text" onfocus="this.value=''" placeholder="Search..." id="srcStr">
       <button type="submit" onclick="search()" id="srcButt">submit</button>
+      <button id="sBarButt" onclick="openSBar()">&#9776;</button>
     </div>
 
 <div class="container">
 
-    <div class="sidebar">
+    <div id="sidebar">
       <a href="spc_spit.html" id="sdmn">Spit Distance</a>
       <a href="spc_calc_2.html">Calculator2</a>
       <a href="spc_calc_3.html">Calculator3</a>

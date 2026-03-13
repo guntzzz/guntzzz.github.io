@@ -206,3 +206,13 @@ function numbAnime(x,l) {
     }
   }
 }
+
+function openSBar() {
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("sBarButt").setAttribute("onclick", "closeSBar()");
+  }
+
+function closeSBar() {
+  document.getElementById("sidebar").style.display = "none";
+  document.getElementById("sBarButt").setAttribute("onclick", "openSBar()");
+}
