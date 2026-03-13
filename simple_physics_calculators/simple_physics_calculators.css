@@ -218,7 +218,7 @@ a {
 	.name {display:none;}
 	#subt {display:none;}
 	.logo {justify-self:start;}
-	.hdrmenu{grid-template-columns:1fr 1fr 1fr 2fr 1fr;font-size:30px;}
+	.hdrmenu{grid-template-columns:1fr 1fr 1fr 2fr 1fr;}
 	#mnitems {grid-column-start:1;}
 	#srcStr {grid-column-start:4;}
 	#sidebar {display:none;width:30vw;}
@@ -227,4 +227,5 @@ a {
 	#calculator {width:80vw;}
 	#sBarButt {display:grid; height:50px;width:50px; border-radius:40px; background-color:orange;margin:0px 0px 5px 20px;font-size:30px;text-align:center;}
 	#sBarButt:hover {border-color:orange;}
+	* {font-size:30px;}
 }
