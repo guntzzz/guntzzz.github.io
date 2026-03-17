@@ -227,7 +227,7 @@ a {
 	#srcStr {grid-column-start:4;}
 	#sidebar {display:none;width:30vw;position:fixed;top:225px;z-index:9999;border-style:solid;border-color:grey;height:99vh;background-color:white;}
 	#sidebar a {display:block;}
-	.container {grid-template-columns:1fr;margin:20px;position:relative;top:230px;z-index:999;}
+	.container {grid-template-columns:1fr;margin:20px;position:relative;top:230px;}
 	#calculator {width:80vw;}
 	#sBarButt {display:grid; height:80px;width:80px; border-radius:60px; background-color:orange;margin:0px 0px 5px 20px;}
 	#sBarButt:hover {border-color:orange;}
