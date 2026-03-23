@@ -5,6 +5,7 @@ function dbInitiative() {
 	cards = [1,2,3,4,5,6,7,8,9,10];
 	var res = [];
 	var rem = [];
+	var c_rem = [];
 	for (i = 0; i < data.length; i++) {
 		let kpTurn = [];
 		kpTurn = data[i].split(",");
@@ -17,10 +18,14 @@ function dbInitiative() {
 		if (kpTurn.length == 2 && kpTurn[1] <= 10 && kpTurn[1] > 0) {
 			res.push([parseInt(kpTurn[1]),kpTurn[0]]);
 			rem.push(data[i]);
+			c_rem.push(kpTurn[1]);
 		}
 	}
+	console.log(res);
+	console.log(c_rem);
 	for (i = 0; i < rem.length; i++) {
-		cards.splice(cards.indexOf(parseInt(rem[i].split(",")[1])),1);
+		// cards.splice(cards.indexOf(parseInt(rem[i].split(",")[1])),1);
+		cards.splice(cards.indexOf(parseInt(c_rem[i])),1);
 		data.splice(data.indexOf(rem[i]),1);
 	}
 	shuffleArray(cards);
@@ -42,7 +47,6 @@ function dbInitiative() {
 		document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + `<input type="checkbox" id="${i}"> ${res[i][0]} ${res[i][1]}<br>`;
 	}
 	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>";
-	console.log(res);
 }
 
 function shuffleArray(array) {
