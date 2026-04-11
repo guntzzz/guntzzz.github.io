@@ -1,10 +1,26 @@
+div {
+	margin: 20px;
+}
+
+#header {
+	text-align: center;
+}
+
 .container {
 	display:grid;
-	grid-template-columns: 2fr 2fr;
+	grid-template-columns: 2fr 2fr 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
 	}
 
 .tool {
-	position:sticky;
-	top:0;
+	grid-column-start: 2;
 }
 
+
+.notes {
+	grid-column-start: 3;
+}
+
+#notesCon {
+	display: none;
+}

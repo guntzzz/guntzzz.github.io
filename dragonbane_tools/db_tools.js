@@ -111,3 +111,13 @@ function error() {
 	b = Math.floor(Math.random() * 256);
 	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>" + ` <span style="color:rgb(${r},${g},${b})"> Invalid Swap</span>`;
 }
+
+function openNotes() {
+    document.getElementById("notesCon").style.display = "grid";
+    document.getElementById("notesButt").setAttribute("onclick", "closeNotes()");
+  }
+
+function closeNotes() {
+  document.getElementById("notesCon").style.display = "none";
+  document.getElementById("notesButt").setAttribute("onclick", "openNotes()");
+}

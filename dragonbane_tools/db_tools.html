@@ -4,19 +4,29 @@
 		<link rel="stylesheet" href="db_tools.css"></link>
 	</head>
 	<body>
+		<div id="header">
+			<h1>Dragonbane Tools</h1>
+		</div>
 		<div class="container">
 			<div class="tool">
-				<h1>Dragonbane Tools</h1>
-				<br>
 				<h2>Initiative turn</h2>
-				<br>
 				<p><b>Insert combat partecipants each in a different row</b>
 				<br><b>Keep initiative turn:</b> write the card number after the name separated by a comma
 				<br><b>Swap initiative turn:</b> check the boxes of the characters you want to swap and click the button
 				<br>
 				</p>
-				<textarea id="combPart" name="dBTools" rows="10" cols="50"></textarea>
-				<button type="submit" onclick="dbInitiative()" id="initData">Submit</button>
+				<textarea id="combPart" name="dBTools" rows="10" cols="50">
+Atticus Finch
+Ebenezer Scrooge
+Sherlock Holmes
+Holly Golightly
+Huckleberry Finn
+Elizabeth Bennet
+Jay Gatsby
+Hester Prynne
+Ishmael
+Holden Caulfield</textarea>
+				<button type="submit" onclick="dbInitiative()" id="initData">New Turn</button>
 				<p id="results"></p>
 				<span id="swapB"></span>
 			</div>
@@ -26,10 +36,9 @@
 				<br>
 				<br>
 				<br>
-				<br>
-				<br>
-				<h2>notes</h2>
-				<span style="font-size:12px">5/3/2026
+				<button type="button" onclick="openNotes()" id="notesButt">notes</button>
+				<span style="font-size:12px" id="notesCon">
+						<br>5/3/2026
 						<br>you can now keep an initiative turn if you specify the card number after the combatant name, separated by a comma ","
 						<br>you can now once per turn swap initiative with another combatant, check the corrispondent boxes and click "Swap". A partecipant who has already swapped turns is marked with an asterisk "*"
 						<br>6/3/2026
@@ -41,4 +50,3 @@
 		<script src="db_tools.js"></script>
 	</body>
 </html>
-
