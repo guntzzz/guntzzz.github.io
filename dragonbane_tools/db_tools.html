@@ -8,14 +8,16 @@
 			<h1>Dragonbane Tools</h1>
 		</div>
 		<div class="container">
-			<div class="tool">
-				<h2>Initiative turn</h2>
-				<p><b>Insert combat partecipants each in a different row</b>
-				<br><b>Keep initiative turn:</b> write the card number after the name separated by a comma
-				<br><b>Swap initiative turn:</b> check the boxes of the characters you want to swap and click the button
-				<br>
-				</p>
-				<textarea id="combPart" name="dBTools" rows="10" cols="50">
+			<div id="centralArea">
+				<div class="tool">
+					<h2>Initiative turn</h2>
+					<p><b>Insert combat partecipants each in a different row</b>
+					<br><b>Keep initiative turn:</b> write the card number after the name separated by a comma
+					<br><b>Swap initiative turn:</b> check the boxes of the characters you want to swap and click the button
+					<br><b>Lightning fast:</b> to use this heroic ability, insert the character's name twice thant delete the turn you don't choose
+					<br>
+					</p>
+					<textarea id="combPart" name="dBTools" rows="10" cols="50">
 Atticus Finch
 Ebenezer Scrooge
 Sherlock Holmes
@@ -26,25 +28,28 @@ Jay Gatsby
 Hester Prynne
 Ishmael
 Holden Caulfield</textarea>
-				<button type="submit" onclick="dbInitiative()" id="initData">New Turn</button>
-				<p id="results"></p>
-				<span id="swapB"></span>
-			</div>
+					<button type="submit" onclick="dbInitiative()" id="initData">New Turn</button>
+					<p id="results"></p>
+					<span id="swapB"></span>
+				</div>
 
-			<div class="notes">
-				<br>
-				<br>
-				<br>
-				<br>
-				<button type="button" onclick="openNotes()" id="notesButt">notes</button>
-				<span style="font-size:12px" id="notesCon">
-						<br>5/3/2026
-						<br>you can now keep an initiative turn if you specify the card number after the combatant name, separated by a comma ","
-						<br>you can now once per turn swap initiative with another combatant, check the corrispondent boxes and click "Swap". A partecipant who has already swapped turns is marked with an asterisk "*"
-						<br>6/3/2026
-						<br>fixed some bugs about blank spaces in names, you can now use them but multiple consecutive spaces will be reduced to one
-						<br>you can also use commas in names if you REALLY want
-				</span>
+				<div class="notes">
+					<br>
+					<br>
+					<br>
+					<br>
+					<button type="button" onclick="openNotes()" id="notesButt">notes</button>
+					<span style="font-size:12px" id="notesCon">
+							<br>5/3/2026
+							<br>you can now keep an initiative turn if you specify the card number after the combatant name, separated by a comma ","
+							<br>you can now once per turn swap initiative with another combatant, check the corrispondent boxes and click "Swap". A partecipant who has already swapped turns is marked with an asterisk "*"
+							<br>6/3/2026
+							<br>fixed some bugs about blank spaces in names, you can now use them but multiple consecutive spaces will be reduced to one
+							<br>you can also use commas in names if you REALLY want
+							<br>13/4/2026
+							<br>added the "Delete" function that give you the option of deleting one or more partecipants from the initiative turn
+					</span>
+				</div>
 			</div>
 		</div>
 		<script src="db_tools.js"></script>

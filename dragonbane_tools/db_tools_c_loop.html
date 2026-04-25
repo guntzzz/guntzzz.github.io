@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="db_tools.css"></link>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Dragonbane Tools</h1>
+		</div>
+		<div class="container">
+			<div id="centralArea">
+				<div class="tool">
+          <label for="skill">Casting skill:</label>
+          <br><input type="text" id="skill" name="skill">
+          <br>
+          <label for="conditions">Final number of conditions:</label>
+          <br><input type="text" id="conditions" name="conditions">
+					<br>
+          <label for="willP">Will points:</label>
+          <br><input type="text" id="willP" name="willP">
+					<br>
+          <label for="healthP">Health points:</label>
+          <br><input type="text" id="healthP" name="healthP">
+					<br>
+          <br><button type="submit" onclick="loop()">Simulate loop</button>
+					<br>
+					<p id="results"></p>
+        </div>
+      </div>
+    </div>
+    <script src="db_tools_c_loop.js"></script>
+    </body>
+  </html>

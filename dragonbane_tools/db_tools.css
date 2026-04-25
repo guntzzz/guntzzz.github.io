@@ -9,16 +9,23 @@ div {
 .container {
 	display:grid;
 	grid-template-columns: 2fr 2fr 1fr 2fr;
-	grid-template-rows: 1fr 1fr;
 	}
 
-.tool {
+#centralArea {
+	display: grid;
 	grid-column-start: 2;
+	grid-column-end: span 2;
+	grid-template-columns: subgrid;
+	border-style: solid;
+	min-height: 650px;
 }
 
+.tool {
+	grid-column-start: 1;
+}
 
 .notes {
-	grid-column-start: 3;
+	grid-column-start: 2;
 }
 
 #notesCon {

@@ -46,7 +46,7 @@ function dbInitiative() {
 	for (let i = 0; i < res.length; i++) {
 		document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + `<input type="checkbox" id="${i}"> ${res[i][0]} ${res[i][1]}<br>`;
 	}
-	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>";
+	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button><button type=\"button\" id=\"del\"i onclick=\"deleteTurns()\":w>Delete</button>";
 }
 
 function shuffleArray(array) {
@@ -57,7 +57,7 @@ function shuffleArray(array) {
 }
 
 function swapTurns() {
-	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>";
+	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\" onclick=\"swapTurns()\">Swap</button><button type=\"button\" id=\"del\" onclick=\"deleteTurns()\">Delete</button>";
 	let data = document.getElementById("results").innerText;
 	data = data.split("\n");
 	var swap = [];
@@ -80,11 +80,11 @@ function swapTurns() {
 		}
 	}
 	if (swap.length != 2) {
-		error();
+		error('Invalid swap');
 	} else {
 		for (let i = 0; i < swap.length; i++) {
 			if (swap[i].length > 4) {
-				error();
+				error('Invalid swap');
 				break;
 			} else if (i == swap.length - 1) {
 				[data[swap[0][3]][2],data[swap[1][3]][2]] = [data[swap[1][3]][2],data[swap[0][3]][2]];
@@ -105,11 +105,34 @@ function swapTurns() {
 	console.log(data);
 }
 
-function error() {
+function deleteTurns() {
+	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\" onclick=\"swapTurns()\">Swap</button><button type=\"button\" id=\"del\" onclick=\"deleteTurns()\">Delete</button>";
+	let data = document.getElementById("results").innerText;
+	data = data.split("\n");
+	ck = data.length;
+	var rem = [];
+	for (let i = 0; i < data.length-1; i++) {
+		if (document.getElementById(`${i}`).checked == true) {
+			rem.push(data[i]);
+		}
+	}
+	for (let i = 0; i < rem.length; i++) {
+		data.splice(data.indexOf(rem[i]),1);
+	}
+	document.getElementById("results").innerHTML = "";
+	for (let i = 0; i < data.length - 1; i++) {
+		document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + `<input type="checkbox" id="${i}"> ${data[i]}<br>`;
+	}
+	if (data.length == ck) {
+		error('Delete what?')
+	}
+}
+
+function error(e_msg) {
 	r = Math.floor(Math.random() * 256);
 	g = Math.floor(Math.random() * 256);
 	b = Math.floor(Math.random() * 256);
-	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\"i onclick=\"swapTurns()\":w>Swap</button>" + ` <span style="color:rgb(${r},${g},${b})"> Invalid Swap</span>`;
+	document.getElementById("swapB").innerHTML = "<button type=\"button\" id=\"swap\" onclick=\"swapTurns()\">Swap</button><button type=\"button\" id=\"del\" onclick=\"deleteTurns()\">Delete</button>" + ` <span style="color:rgb(${r},${g},${b})"> ${e_msg}</span>`;
 }
 
 function openNotes() {
